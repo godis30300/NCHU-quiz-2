@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小考</title>
-    <script src="jquery-3.2.0.min.js"></script>
+    <script src="jquery-3.2.1.js"></script>
     <script>
         function style1() {
             var x1 = document.getElementsByTagName("li")[0];
             x1.innerHTML = "HTML5";
-            x1 = document.getElementsByTagName("li")[1];
-            x1.innerHTML = "CSS3";
             var x2 = document.createTextNode("MySQL");
             var x3 = document.createElement("li");
             x3.appendChild(x2);
@@ -20,6 +18,8 @@
           }
 
         function style2() {
+          x1 = $("#s1");
+          x1.html("CSS3");
 
         }
 
@@ -36,7 +36,7 @@
         <div>Content</div>
         <ul id="mylist">
             <li>HTML</li>
-            <li>CSS</li>
+            <li id="s1">CSS</li>
             <li>DOM</li>
             <li>Javascript</li>
             <li>Jsp</li>
