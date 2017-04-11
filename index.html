@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小考</title>
     <script src="jquery-3.2.1.js"></script>
+
+  <style>
+    .p1 { font-size:200%; color: red; }
+  </style>
+
     <script>
         function style1() {
             var x1 = document.getElementsByTagName("li")[0];
@@ -15,28 +20,29 @@
             x3.appendChild(x2);
             document.getElementById("mylist").appendChild(x3);
 
-          }
+        }
 
         function style2() {
-          x1 = $("#s1");
-          x1.html("CSS3");
+            x1 = $("#s1");
+            x1.html("CSS3");
 
         }
 
         function style3() {
-              var x1 = document.getElementById("z1");
-              var x2 = document.createElement("div7");
-              x2.appendChild(document.createTextNode("    4103029042"))
-              x1.appendChild(x2);
+            var x1 = document.getElementById("z1");
+            var x2 = document.createElement("div7");
+            x2.appendChild(document.createTextNode("    4103029042"))
+            x1.appendChild(x2);
         }
+        $(document).ready(function() {
+            $('li').mouseenter(function() {
+                    $(this).addClass("p1");
+                })
+                .mouseleave(function() {
+                    $(this).removeClass("p1");
+                });
+        });
     </script>
-
-    p1{
-      font-size:200%;
-    }
-    p2{
-      font-size:50%;
-    }
 </head>
 
 <body>
@@ -50,7 +56,7 @@
             <li>DOM</li>
             <li>Javascript</li>
             <li>Jsp</li>
-            </ul>
+        </ul>
     </p>
     <input type="button" value="以JS更改元素內容" onclick="style1()">
     <input type="button" value="以JQuery更改CSS" onclick="style2()">
