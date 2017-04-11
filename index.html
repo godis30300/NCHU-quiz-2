@@ -11,10 +11,10 @@
             x1.innerHTML = "HTML5";
             x1 = document.getElementsByTagName("li")[1];
             x1.innerHTML = "CSS3";
-            var x3 = document.createElement("li");
             var x2 = document.createTextNode("MySQL");
-            x1 = document.getElementsByTagName("ul");
-            x1.appendChild(x3);
+            var x3 = document.createElement("li").appendChild(x2);
+            document.getElementById("mylist").appendChild(x3);
+
           }
 
         function style2() {
@@ -32,7 +32,7 @@
         <h1>Web programming</h1>
         <hr>
         <div>Content</div>
-        <ul>
+        <ul id="mylist">
             <li>HTML</li>
             <li>CSS</li>
             <li>DOM</li>
